@@ -5,10 +5,7 @@ import java.util.ArrayList;
 
 public class Day1 extends Day{
 	
-	public Day1(){
-		super();
-
-	}
+	public Day1(){super();}
 
 	public void solveProblem(){
 		System.out.println("INFO: Starting problem...");
