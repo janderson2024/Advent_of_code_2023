@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 public class Helpers{
 	
-	public static ArrayList<String> getPuzzleInput(String filename){
+	public static String[] getPuzzleInput(String filename){
 		ArrayList<String> puzzleinputs = new ArrayList<String>();
 
 		String filePath = "res/day_inputs/" + filename;
@@ -31,7 +31,7 @@ public class Helpers{
 			e.printStackTrace();
 		}
 
-		return puzzleinputs;
+		return puzzleinputs.toArray(new String[puzzleinputs.size()]);
 	}
 
 	public static int[] getIntsFromString(String input){
@@ -91,5 +91,59 @@ public class Helpers{
 
 		return input;
 
+	}
+
+
+	public static boolean hasSymbol(String[] lines, int lineNum, int charNum){
+		/*
+		-1, 0
+		char
+		 1, 0
+		*/
+
+		boolean isSymbol = false;
+
+		for(int i = -1; i <= 1; i++){
+				try {
+					char letterToCheck = lines[lineNum+i].charAt(charNum);
+
+					boolean notNum = !Character.isDigit(letterToCheck);
+					boolean notLetter = !Character.isLetter(letterToCheck);
+					boolean notDot = letterToCheck != '.';
+
+					isSymbol = isSymbol || (notNum && notLetter && notDot);
+				} catch(Exception e){
+					//System.out.println("Char we tried checking doesn't exist!");
+					//oopsies i was checking out of bounds, but this is why we have catch blocks
+				}
+		}
+
+		return isSymbol;
+	}
+
+	public static int[] hasSpecificSymbol(String[] lines, int lineNum, int charNum, char symbol){
+		//returns [linePos, charPos]
+		/*
+		-1, 0
+		char
+		 1, 0
+		*/
+
+		boolean isSymbol = false;
+
+		for(int i = -1; i <= 1; i++){
+				try {
+					char letterToCheck = lines[lineNum+i].charAt(charNum);
+
+					if(symbol == letterToCheck){
+						return new int[] {lineNum+i, charNum};
+					}
+				} catch(Exception e){
+					//System.out.println("Char we tried checking doesn't exist!");
+					//oopsies i was checking out of bounds, but this is why we have catch blocks
+				}
+		}
+
+		return new int[] {-1, -1};
 	}
 }

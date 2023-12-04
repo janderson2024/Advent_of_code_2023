@@ -14,7 +14,7 @@ public class Day2 extends Day{
 
 	public void solveProblem(){
 		System.out.println("INFO: Starting problem...");
-		ArrayList<String> input = Helpers.getPuzzleInput("day2.txt");
+		String[] input = Helpers.getPuzzleInput("day2.txt");
 		System.out.println("INFO: Loaded input file...");
 
 		String[] testCases = {
@@ -45,7 +45,7 @@ public class Day2 extends Day{
 
 	public void solveExtraProblem(){
 		System.out.println("INFO: Starting problem...");
-		ArrayList<String> input = Helpers.getPuzzleInput("day2.txt");
+		String[] input = Helpers.getPuzzleInput("day2.txt");
 		System.out.println("INFO: Loaded input file...");
 
 		String[] testCases = {

@@ -9,7 +9,7 @@ public class Day1 extends Day{
 
 	public void solveProblem(){
 		System.out.println("INFO: Starting problem...");
-		ArrayList<String> input = Helpers.getPuzzleInput("day1.txt");
+		String[] input = Helpers.getPuzzleInput("day1.txt");
 		System.out.println("INFO: Loaded input file...");
 
 		int fullCount = 0;
@@ -31,7 +31,7 @@ public class Day1 extends Day{
 
 	public void solveExtraProblem(){
 		System.out.println("INFO: Starting extra problem...");
-		ArrayList<String> input = Helpers.getPuzzleInput("day1.txt");
+		String[] input = Helpers.getPuzzleInput("day1.txt");
 		System.out.println("INFO: Loaded input file...");
 
 		int fullCount = 0;
