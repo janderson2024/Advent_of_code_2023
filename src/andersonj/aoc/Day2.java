@@ -2,7 +2,6 @@ package andersonj.aoc;
 
 import andersonj.helper.Helpers;
 import andersonj.helper.Day2Game;
-import java.util.ArrayList;
 
 public class Day2 extends Day{
 

@@ -1,7 +1,6 @@
 package andersonj.aoc;
 
 import andersonj.helper.Helpers;
-import java.util.ArrayList;
 
 public class Day1 extends Day{
 	
