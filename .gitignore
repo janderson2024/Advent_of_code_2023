@@ -2,4 +2,4 @@ advent_of_code.sublime-project
 advent_of_code.sublime-workspace
 bin/
 
-*/day_inputs/
+*/day_inputs/*.txt
