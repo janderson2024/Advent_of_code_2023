@@ -2,5 +2,4 @@ advent_of_code.sublime-project
 advent_of_code.sublime-workspace
 bin/
 
-day_inputs/day[0-9].txt
-day_inputs/day[0-9][0-9].txt
+*/day_inputs/
