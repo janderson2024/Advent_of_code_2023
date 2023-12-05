@@ -6,12 +6,14 @@ import java.util.HashMap;
 
 public class Day4 extends Day{
 
+	private static final INPUT_FILE = "day4.txt";
+
 
 	public Day4(){super();}
 
 	public void solveProblem(){
 		System.out.println("INFO: Starting problem...");
-		String[] input = Helpers.getPuzzleInput("day4.txt");
+		String[] input = Helpers.getPuzzleInput(INPUT_FILE);
 		System.out.println("INFO: Loaded input file...");
 
 		String[] testCases = {
@@ -42,7 +44,7 @@ public class Day4 extends Day{
 
 	public void solveExtraProblem(){
 		System.out.println("INFO: Starting problem...");
-		String[] input = Helpers.getPuzzleInput("day4.txt");
+		String[] input = Helpers.getPuzzleInput(INPUT_FILE);
 		System.out.println("INFO: Loaded input file...");
 
 		String[] testCases = {

@@ -3,12 +3,14 @@ package andersonj.aoc;
 import andersonj.helper.Helpers;
 
 public class Day1 extends Day{
+
+	private static final INPUT_FILE = "day1.txt";
 	
 	public Day1(){super();}
 
 	public void solveProblem(){
 		System.out.println("INFO: Starting problem...");
-		String[] input = Helpers.getPuzzleInput("day1.txt");
+		String[] input = Helpers.getPuzzleInput(INPUT_FILE);
 		System.out.println("INFO: Loaded input file...");
 
 		int fullCount = 0;
@@ -30,7 +32,7 @@ public class Day1 extends Day{
 
 	public void solveExtraProblem(){
 		System.out.println("INFO: Starting extra problem...");
-		String[] input = Helpers.getPuzzleInput("day1.txt");
+		String[] input = Helpers.getPuzzleInput(INPUT_FILE);
 		System.out.println("INFO: Loaded input file...");
 
 		int fullCount = 0;
