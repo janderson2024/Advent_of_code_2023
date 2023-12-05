@@ -2,4 +2,4 @@
 
 javac -d ./bin -cp src/ src/andersonj/*.java
 
-java -cp ./bin andersonj.Launcher
+java  -cp ./bin andersonj.Launcher

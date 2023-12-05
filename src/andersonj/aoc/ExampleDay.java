@@ -5,7 +5,7 @@ import andersonj.helper.Helpers;
 
 public class ExampleDay extends Day{
 
-	private static final INPUT_FILE = "day#.txt";
+	private static final String INPUT_FILE = "day#.txt";
 
 
 	public ExampleDay(){super();}

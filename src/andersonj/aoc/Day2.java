@@ -5,7 +5,7 @@ import andersonj.helper.Day2Game;
 
 public class Day2 extends Day{
 
-	private static final INPUT_FILE = "day2.txt";
+	private static final String INPUT_FILE = "day2.txt";
 
 	private static final int MAX_RED = 12;
 	private static final int MAX_GREEN = 13;

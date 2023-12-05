@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Day3 extends Day{
 
-	private static final INPUT_FILE = "day3.txt";
+	private static final String INPUT_FILE = "day3.txt";
 
 	public Day3(){super();}
 
