@@ -62,6 +62,16 @@ public class Helpers{
 		return Integer.parseInt(temp);
 	}
 
+	public static long concatLongFromIntArray(int[] input){
+		String temp = "";
+
+		for(int i = 0; i < input.length; i++){
+			temp += input[i];
+		}
+
+		return Long.parseLong(temp);
+	}
+
 	public static String replaceWordsWithInts(String input){
 		HashMap<String, Integer> digitsToInt = new HashMap<String, Integer>();
 		digitsToInt.put("one", 1);
@@ -93,14 +103,7 @@ public class Helpers{
 
 	}
 
-
 	public static boolean hasSymbol(String[] lines, int lineNum, int charNum){
-		/*
-		-1, 0
-		char
-		 1, 0
-		*/
-
 		boolean isSymbol = false;
 
 		for(int i = -1; i <= 1; i++){
@@ -122,13 +125,6 @@ public class Helpers{
 	}
 
 	public static int[] hasSpecificSymbol(String[] lines, int lineNum, int charNum, char symbol){
-		//returns [linePos, charPos]
-		/*
-		-1, 0
-		char
-		 1, 0
-		*/
-
 		boolean isSymbol = false;
 
 		for(int i = -1; i <= 1; i++){
@@ -145,5 +141,27 @@ public class Helpers{
 		}
 
 		return new int[] {-1, -1};
+	}
+
+	public static int[] getIntArrayFromSpaceSeperatedString(String input){
+		ArrayList<Integer> tempOutput = new ArrayList<Integer>();
+
+		String[] splitOnSpace = input.split(" ");
+
+
+		for(String splitEntry : splitOnSpace){
+			try{
+				tempOutput.add(Integer.parseInt(splitEntry));
+			} catch(Exception e){
+				//not a number, so its not added :)
+			}
+		}
+
+		int[] output = new int[tempOutput.size()];
+		for(int i = 0; i < tempOutput.size(); i++){
+			output[i] = tempOutput.get(i).intValue();
+
+		}
+		return output;
 	}
 }
