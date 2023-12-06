@@ -1,15 +1,37 @@
 package andersonj.helper;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+
+class Day5MapEntry{
+	private long destStart;
+	private long sourceStart;
+	private long sourceEnd;
+
+	public Day5MapEntry(long sourceStart, long destStart, long range){
+		this.destStart = destStart;
+		this.sourceStart = sourceStart;
+		this.sourceEnd = sourceStart + range-1;
+	}
+
+	public long tryToConvert(long input){
+
+		if(input >= this.sourceStart && input <= this.sourceEnd){
+			long offset = input - this.sourceStart;
+			return this.destStart + offset;
+		}
+
+		return -1L;
+	}
+}
 
 
 public class Day5Map{
 
-	private HashMap<Long, Long> seedMap;
+	private ArrayList<Day5MapEntry> entries;
 
 
 	public Day5Map(){
-		this.seedMap = new HashMap<Long, Long>();
+		this.entries = new ArrayList<Day5MapEntry>();
 	}
 
 	public void parseMapLine(String input){
@@ -19,25 +41,25 @@ public class Day5Map{
 		long destStart = Long.parseLong(inputs[0]);
 		long rangeAmount = Long.parseLong(inputs[2]);
 
-		for(long i = 0; i < rangeAmount; i++){
-			seedMap.put(sourceStart+i, destStart+i);
-		}
+		entries.add(new Day5MapEntry(sourceStart, destStart, rangeAmount));
 
 	}
 
 	public long getCorrespondant(long input){
 
-		Long value = seedMap.get(input);
+		for(Day5MapEntry entry : this.entries){
+			long output = entry.tryToConvert(input);
 
-		if(value != null){
-			return value;
+			if(output != -1L){
+				return output;
+			}
 		}
-
 		return input;
+			
 	}
 
 	public String toString(){
-		return this.seedMap.toString();
+		return this.entries.toString();
 	}
 
 }

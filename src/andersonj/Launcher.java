@@ -9,9 +9,9 @@ class Launcher{
 		Day day = new Day5();
 
 		System.out.println("INFO: Starting problem");
-		day.solveProblem();
+		//day.solveProblem();
 		System.out.println("-----------------------");
 		System.out.println("INFO: Starting extra problem");
-		//day.solveExtraProblem();
+		day.solveExtraProblem();
 	}
 }
