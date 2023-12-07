@@ -164,4 +164,14 @@ public class Helpers{
 		}
 		return output;
 	}
+
+	public static int count(String haystack, String needle){
+	    int count = 0;
+	    for (int i=0; i < haystack.length(); i++){
+	        if (haystack.charAt(i) == needle.charAt(0)){
+	             count++;
+	        }
+	    }
+	    return count;
+}
 }

@@ -6,7 +6,7 @@ class Launcher{
 
 	public static void main(String[] args) {
 		
-		Day day = new Day6();
+		Day day = new Day7();
 
 		System.out.println("INFO: Starting problem");
 		day.solveProblem();
